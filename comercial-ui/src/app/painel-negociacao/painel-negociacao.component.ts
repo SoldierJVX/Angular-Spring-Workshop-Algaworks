@@ -8,13 +8,13 @@ import { OportunidadeService } from '../oportunidade.service';
 })
 export class PainelNegociacaoComponent implements OnInit {
 
-  oportunides = []
+  oportunidades = []
 
   constructor(private oportunidadeService: OportunidadeService) { }
 
   ngOnInit() {
     this.oportunidadeService.listar()
-    .subscribe(resposta => this.oportunides = <any>resposta)
+    .subscribe(resposta => this.oportunidades = <any>resposta)
   }
 
 }
